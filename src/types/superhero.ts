@@ -1,7 +1,7 @@
 import { z } from "@builder.io/qwik-city";
 
 export const Superhero = z.object({
-  id: z.string().uuid(),
+  id: z.string(),
   name: z.string(),
   firstName: z.string(),
   lastName: z.string(),

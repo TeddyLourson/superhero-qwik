@@ -19,11 +19,13 @@ export const useSuperheroes = routeLoader$<UseSuperheroes>(
 );
 
 export default component$(() => {
+  const res = useSuperheroes();
+
   return (
     <>
       <h1>Retrieved data :</h1>
       {/* Server */}
-      {useSuperheroes().value.superheroes.map((superhero) => (
+      {res.value.superheroes.map((superhero) => (
         <SuperheroCard key={superhero.id} superhero={superhero} />
       ))}
 
